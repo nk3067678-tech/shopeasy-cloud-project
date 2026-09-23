@@ -2,18 +2,56 @@
 <html>
 <head>
     <title>ShopEasy</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <h1>ShopEasy</h1>
+    <p>Online Shopping Made Simple</p>
 
-    <h2>Welcome to ShopEasy</h2>
+    <h2>Our Products</h2>
 
-    <p>Online shopping made simple.</p>
+    <div>
+        <h3>Wireless Headphones</h3>
+        <p>Price: ₹1,999</p>
+        <button onclick="addToCart('Wireless Headphones')">
+            Add to Cart
+        </button>
+    </div>
 
-    <button>Shop Now</button>
+    <hr>
+
+    <div>
+        <h3>Smart Watch</h3>
+        <p>Price: ₹2,499</p>
+        <button onclick="addToCart('Smart Watch')">
+            Add to Cart
+        </button>
+    </div>
+
+    <hr>
+
+    <div>
+        <h3>Laptop</h3>
+        <p>Price: ₹49,999</p>
+        <button onclick="addToCart('Laptop')">
+            Add to Cart
+        </button>
+    </div>
+
+    <h2>Cart</h2>
+    <p id="cartMessage">Your cart is empty.</p>
+
+    <script>
+        let cart = [];
+
+        function addToCart(product) {
+            cart.push(product);
+
+            document.getElementById("cartMessage").innerText =
+                "Cart: " + cart.join(", ");
+        }
+    </script>
 
 </body>
 </html>
