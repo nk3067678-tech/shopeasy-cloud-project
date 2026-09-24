@@ -168,7 +168,44 @@
     <script>
 
         let cart = [];
+const products = [
+    {
+        name: "Wireless Headphones",
+        price: 1999
+    },
+    {
+        name: "Smart Watch",
+        price: 2499
+    },
+    {
+        name: "Laptop",
+        price: 49999
+    }
+];
 
+let productHTML = "";
+
+products.forEach(product => {
+
+    productHTML += `
+        <div class="product-card">
+
+            <h3>${product.name}</h3>
+
+            <p class="price">
+                ₹${product.price}
+            </p>
+
+            <button onclick="addToCart('${product.name}')">
+                Add to Cart
+            </button>
+
+        </div>
+    `;
+
+});
+
+document.getElementById("products").innerHTML = productHTML;
         function addToCart(product) {
 
             cart.push(product);
@@ -180,48 +217,7 @@
                 cart.length;
         }
 
-        fetch("products.json")
-
-            .then(response => response.json())
-
-            .then(products => {
-
-                let productHTML = "";
-
-                products.forEach(product => {
-
-                    productHTML += `
-
-                        <div class="product-card">
-
-                            <h3>${product.name}</h3>
-
-                            <p class="price">
-                                ₹${product.price}
-                            </p>
-
-                            <button
-                                onclick="addToCart('${product.name}')">
-                                Add to Cart
-                            </button>
-
-                        </div>
-
-                    `;
-                });
-
-                document.getElementById("products").innerHTML =
-                    productHTML;
-
-            })
-
-            .catch(error => {
-
-                document.getElementById("products").innerText =
-                    "Products load nahi ho pa rahe.";
-
-            });
-
+       
     </script>
 
 </body>
