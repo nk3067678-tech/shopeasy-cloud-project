@@ -261,6 +261,18 @@ function displayProducts(productList) {
 }
 
 function filterProducts(category) {
+
+    if (category === "All") {
+        displayProducts(products);
+    } else {
+        const filteredProducts = products.filter(
+            product => product.category === category
+        );
+
+        displayProducts(filteredProducts);
+    }
+}
+
 function filterAge(age) {
 
     if (age === "All") {
@@ -281,16 +293,6 @@ function filterGender(gender) {
     } else {
         const filteredProducts = products.filter(
             product => product.gender === gender
-        );
-
-        displayProducts(filteredProducts);
-    }
-}
-    if (category === "All") {
-        displayProducts(products);
-    } else {
-        const filteredProducts = products.filter(
-            product => product.category === category
         );
 
         displayProducts(filteredProducts);
