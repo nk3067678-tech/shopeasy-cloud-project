@@ -2,17 +2,20 @@
 
 ## 1. Product Overview
 
-ShopEasy is a simple e-commerce website that allows users to browse products, view prices and add products to a shopping cart.
+ShopEasy is a simple e-commerce web application that allows users to browse products and add products to their shopping cart.
 
-The goal of this project is to understand how a Product Manager plans a product from requirements to launch while considering cloud infrastructure.
+The project demonstrates Product Management thinking combined with Cloud Architecture concepts.
 
 ---
 
-## 2. Problem Statement
+## 2. Product Goal
 
-Users need a simple and easy way to browse available products and add products to their cart.
+Create a simple and reliable online shopping experience where users can:
 
-The product should provide a basic shopping experience while being designed to support future growth.
+* Discover products
+* View product information
+* Add products to their cart
+* See the number of items in their cart
 
 ---
 
@@ -20,80 +23,94 @@ The product should provide a basic shopping experience while being designed to s
 
 ### Primary Users
 
-Online shoppers who want to:
+Online shoppers who want a simple way to browse products and add items to a shopping cart.
 
-* Browse products
-* Check prices
-* Add products to their cart
+### User Need
 
-### Business Team
-
-The product and engineering team responsible for building, maintaining and scaling ShopEasy.
+Users need a clear and easy shopping experience without unnecessary complexity.
 
 ---
 
-## 4. Product Goals
+## 4. Problem Statement
 
-ShopEasy should:
+Users need a simple product browsing experience where they can quickly understand available products and add items to their cart.
 
-* Provide a simple shopping experience
-* Display products clearly
-* Allow users to add products to cart
-* Support future product expansion
-* Be scalable as traffic increases
-* Maintain security and reliability
+The product should provide:
+
+* Clear product information
+* Simple navigation
+* Fast interaction
+* Easy cart access
 
 ---
 
-## 5. MVP Features
+## 5. Core Features
 
 ### Feature 1 — Product Catalog
 
-Users should be able to see:
+Users can view available products.
+
+Each product displays:
 
 * Product name
+* Product image
 * Product price
-* Available products
+* Add to Cart button
 
 ### Feature 2 — Add to Cart
 
-Users should be able to click **Add to Cart** and add a product to their cart.
+Users can add products to their cart.
 
-### Feature 3 — Cart Display
+When a product is added:
 
-The website should show the products that the user has added to the cart.
+* Cart count increases
+* Cart information is updated
+
+### Feature 3 — Product Images
+
+Products display visual images to help users identify products quickly.
+
+### Feature 4 — Responsive Interface
+
+The product interface should work across different screen sizes.
 
 ---
 
-## 6. User Stories
+## 6. User Flow
 
-### Product Browsing
-
-As a shopper, I want to view available products so that I can decide what to buy.
-
-### Product Price
-
-As a shopper, I want to see the product price so that I understand the cost before adding it to my cart.
-
-### Add to Cart
-
-As a shopper, I want to add a product to my cart so that I can keep track of products I want to purchase.
-
-### Cart Review
-
-As a shopper, I want to see the products in my cart so that I can review my selections.
+```text
+User
+  ↓
+Open ShopEasy
+  ↓
+Browse Products
+  ↓
+View Product
+  ↓
+Click "Add to Cart"
+  ↓
+Cart Count Updates
+```
 
 ---
 
 ## 7. Functional Requirements
 
-The system should:
+### FR1 — Product Display
 
-1. Load the product catalog.
-2. Display product names and prices.
-3. Provide an Add to Cart button.
-4. Add the selected product to the cart.
-5. Display the selected products in the cart.
+The system must display available products with their name, image and price.
+
+### FR2 — Add to Cart
+
+The system must allow users to add a product to the cart.
+
+### FR3 — Cart Count
+
+The system must update the cart count when a product is added.
+
+### FR4 — Product Images
+
+The system must display the correct image for each product.
 
 ---
 
@@ -101,12 +118,111 @@ The system should:
 
 ### Performance
 
-The website should load quickly and provide an acceptable user experience.
+The website should load quickly and provide responsive interactions.
 
-### Scalability
+### Reliability
 
-The architecture should support increasing traffic and future growth.
+The product should remain available during normal traffic conditions.
 
 ### Security
 
-User and application data should be
+Future backend functionality should protect user and business data.
+
+### Scalability
+
+The architecture should support increasing traffic as the product grows.
+
+---
+
+## 9. Success Metrics
+
+The product can be evaluated using:
+
+* Product page load time
+* Number of products viewed
+* Add-to-cart interactions
+* Cart interaction rate
+* Error rate
+* Website availability
+
+---
+
+## 10. MVP Scope
+
+### Included in MVP
+
+* Product catalog
+* Product images
+* Product prices
+* Add to Cart
+* Cart count
+* Responsive UI
+
+### Not Included in MVP
+
+* User authentication
+* Checkout
+* Payment processing
+* Order management
+* Backend API
+* Database integration
+
+These features can be considered for future versions.
+
+---
+
+## 11. Future Roadmap
+
+### Phase 1
+
+* Product search
+* Product categories
+* Improved cart experience
+
+### Phase 2
+
+* User authentication
+* Backend API
+* Database integration
+
+### Phase 3
+
+* Checkout
+* Payment integration
+* Order management
+
+### Phase 4
+
+* Cloud deployment
+* Auto Scaling
+* Load Balancer
+* Monitoring and alerting
+
+---
+
+## 12. Product Manager Responsibilities
+
+For this project, the PM is responsible for:
+
+* Defining the product problem
+* Identifying target users
+* Defining MVP scope
+* Prioritizing features
+* Defining success metrics
+* Considering scalability
+* Considering security
+* Considering infrastructure cost
+* Preparing the product for launch
+
+---
+
+## 13. MVP Success Criteria
+
+The MVP is considered successful when:
+
+* Users can browse products
+* Correct product images are displayed
+* Users can add products to the cart
+* Cart count updates correctly
+* The interface works on common screen sizes
+* The product can be demonstrated through the live website
