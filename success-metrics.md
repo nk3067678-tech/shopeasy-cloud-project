@@ -1,144 +1,181 @@
-# ShopEasy — Success Metrics & KPIs
+# ShopEasy — Success Metrics
 
 ## 1. Objective
 
-Success metrics help the Product Manager understand whether ShopEasy is providing value to users and meeting product goals.
+Define measurable metrics to understand whether ShopEasy is providing a useful and reliable shopping experience.
 
-Metrics should be reviewed regularly and used to identify areas for improvement.
-
----
-
-## 2. North Star Metric
-
-### Successful Shopping Actions
-
-A successful shopping action means a user views a product and adds it to the cart.
-
-This metric represents meaningful user engagement with the core shopping experience.
+Metrics should help the Product Manager identify user behavior, product performance and areas for improvement.
 
 ---
 
-## 3. Acquisition Metrics
+## 2. North Star Goal
 
-These metrics help understand how users reach ShopEasy.
+The primary goal is to help users successfully discover products and add them to their cart.
 
-### Website Visitors
+A key indicator is:
 
-Number of users visiting the website.
-
-### New Users
-
-Number of users visiting ShopEasy for the first time.
+**Successful Add-to-Cart Actions**
 
 ---
 
-## 4. Engagement Metrics
+## 3. Product Metrics
 
 ### Product Views
 
-Number of times users view products.
+Measures how many times users view products.
+
+**Why it matters:**
+
+Helps understand product discovery and engagement.
+
+---
 
 ### Add-to-Cart Rate
 
-Percentage of product viewers who add a product to their cart.
+Measures the percentage of product interactions that result in an add-to-cart action.
 
 **Formula:**
 
 ```text
 Add-to-Cart Rate =
-Users who add a product to cart
-÷
-Users who view products
-× 100
+Add-to-Cart Actions ÷ Product Views × 100
 ```
-
-### Cart Activity
-
-Number of users who interact with their shopping cart.
 
 ---
 
-## 5. Conversion Metrics
+### Cart Interaction
 
-Future versions can track:
+Measures how frequently users interact with the shopping cart.
 
-### Checkout Conversion Rate
+Examples:
 
-Percentage of users who start checkout and successfully complete an order.
+* Add product
+* View cart
+* Remove product
+* Continue shopping
+
+---
+
+## 4. User Experience Metrics
+
+### Page Load Time
+
+Measures how quickly the website becomes usable.
+
+**Goal:**
+
+Keep the shopping experience responsive and reduce unnecessary waiting.
+
+---
+
+### Error Rate
+
+Measures how frequently users encounter application errors.
+
+**Goal:**
+
+Keep application errors low and identify issues quickly.
+
+---
+
+### Task Completion
+
+Measures whether users can successfully complete the main shopping task:
 
 ```text
-Checkout Conversion Rate =
-Completed Orders
-÷
-Checkout Starts
-× 100
+Open Website
+     ↓
+Browse Product
+     ↓
+Add Product to Cart
 ```
 
-### Order Completion Rate
-
-Percentage of initiated orders that are successfully completed.
-
 ---
 
-## 6. Product Performance Metrics
+## 5. Reliability Metrics
 
-The PM can monitor:
+### Website Availability
 
-* Most viewed products
-* Most added-to-cart products
-* Products with low engagement
-* Product search activity
-* Category engagement
+Measures whether the website is accessible when users attempt to visit it.
 
-These metrics can help identify which products and features users find useful.
+### Application Health
 
----
+Future cloud deployment can monitor:
 
-## 7. Technical Metrics
-
-Product success also depends on system performance.
-
-The team should monitor:
-
-* Page load time
-* API response time
-* Application errors
-* System availability
-* Server CPU usage
+* Server health
+* CPU utilization
 * Database performance
+* Request errors
+* Traffic
+
+AWS CloudWatch can be used for infrastructure monitoring.
 
 ---
 
-## 8. Business Metrics
+## 6. Business Metrics
 
-Future versions can track:
+As ShopEasy develops, additional business metrics can be introduced:
 
-* Number of orders
+* Conversion rate
+* Orders completed
 * Revenue
 * Average order value
-* Repeat customers
-* Customer retention
+* Repeat users
+
+These metrics require backend and transaction functionality that is not currently part of the MVP.
 
 ---
 
-## 9. Example KPI Dashboard
+## 7. Metric Review Process
 
-| Metric              | Purpose                     |
-| ------------------- | --------------------------- |
-| Website Visitors    | Measure traffic             |
-| Product Views       | Measure product interest    |
-| Add-to-Cart Rate    | Measure shopping intent     |
-| Checkout Conversion | Measure purchase completion |
-| Orders              | Measure transactions        |
-| Revenue             | Measure business outcome    |
-| Page Load Time      | Measure performance         |
-| Error Rate          | Measure reliability         |
+The PM should review metrics regularly:
+
+```text
+Collect Data
+     ↓
+Analyze User Behavior
+     ↓
+Identify Problems
+     ↓
+Prioritize Improvements
+     ↓
+Release Changes
+     ↓
+Measure Again
+```
+
+This creates a continuous product improvement cycle.
 
 ---
 
-## 10. PM Review Process
+## 8. MVP Success Criteria
 
-The Product Manager should:
+The MVP should demonstrate that:
 
-1. Collect product data.
-2. Review important KPI
+* Users can find products
+* Product information is clear
+* Product images display correctly
+* Users can add products to the cart
+* Cart count updates correctly
+* The website provides a responsive experience
+
+---
+
+## 9. Future Measurement
+
+Once backend and analytics are implemented, ShopEasy can track these metrics using appropriate analytics and monitoring tools.
+
+The PM should compare metrics over time rather than relying on a single measurement.
+
+---
+
+## 10. PM Principle
+
+Metrics should support product decisions rather than become goals by themselves.
+
+The PM should combine:
+
+**User Feedback + Product Data + Business Goals + Technical Constraints**
+
+to decide what to improve next.
+
