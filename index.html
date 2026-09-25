@@ -150,7 +150,11 @@
     <section class="products-section">
 
         <h2>Our Products</h2>
-
+<div class="category-filter">
+    <button onclick="filterProducts('All')">All</button>
+    <button onclick="filterProducts('Electronics')">Electronics</button>
+    <button onclick="filterProducts('Accessories')">Accessories</button>
+</div>
         <div id="products">
             Loading products...
         </div>
@@ -179,17 +183,17 @@ const products = [
         name: "Wireless Headphones",
         price: 1999,
         image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=800&auto=format&fit=crop"
-    },
+    },category: "Electronics"
     {
         name: "Smart Watch",
         price: 2499,
        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?fm=jpg&q=60&w=800&auto=format&fit=crop"
-    },
+    },category: "Accessories"
     {
         name: "Laptop",
         price: 49999,
         image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?fm=jpg&q=60&w=800&auto=format&fit=crop"
-    }
+    }category: "Electronics"
 ];
 
 let productHTML = "";
@@ -215,7 +219,44 @@ ${product.image ? `<img src="${product.image}" alt="${product.name}">` : ""}
 });
 
 document.getElementById("products").innerHTML = productHTML;
-        function addToCart(product) {
+    function filterProducts(category) {
+
+    let filteredProducts;
+
+    if (category === "All") {
+        filteredProducts = products;
+    } else {
+        filteredProducts = products.filter(
+            product => product.category === category
+        );
+    }
+
+    let filteredHTML = "";
+
+    filteredProducts.forEach(product => {
+
+        filteredHTML += `
+            <div class="product-card">
+
+                ${product.image ? `<img src="${product.image}" alt="${product.name}">` : ""}
+
+                <h3>${product.name}</h3>
+
+                <p class="price">
+                    ₹${product.price}
+                </p>
+
+                <button onclick="addToCart('${product.name}')">
+                    Add to Cart
+                </button>
+
+            </div>
+        `;
+
+    });
+
+    document.getElementById("products").innerHTML = filteredHTML;
+}    function addToCart(product) {
 
             cart.push(product);
 
