@@ -261,7 +261,31 @@ function displayProducts(productList) {
 }
 
 function filterProducts(category) {
+function filterAge(age) {
 
+    if (age === "All") {
+        displayProducts(products);
+    } else {
+        const filteredProducts = products.filter(
+            product => product.ageGroup === age
+        );
+
+        displayProducts(filteredProducts);
+    }
+}
+
+function filterGender(gender) {
+
+    if (gender === "All") {
+        displayProducts(products);
+    } else {
+        const filteredProducts = products.filter(
+            product => product.gender === gender
+        );
+
+        displayProducts(filteredProducts);
+    }
+}
     if (category === "All") {
         displayProducts(products);
     } else {
