@@ -107,7 +107,24 @@
             cursor: pointer;
             font-size: 15px;
         }
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
 
+.category-filter button {
+    background: white;
+    color: #111827;
+    border: 1px solid #ddd;
+}
+
+.category-filter button:hover {
+    background: #111827;
+    color: white;
+}
         button:hover {
             opacity: 0.85;
         }
@@ -156,7 +173,7 @@
     <button onclick="filterProducts('Accessories')">Accessories</button>
 </div>
         <div id="products">
-            Loading products...
+        
         </div>
 
     </section>
