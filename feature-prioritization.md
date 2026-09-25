@@ -1,145 +1,130 @@
 # ShopEasy — Feature Prioritization
 
-## 1. Purpose
+## 1. Objective
 
-Prioritize future ShopEasy features based on user value, business importance and implementation effort.
+Prioritize ShopEasy features based on user value, business impact, effort and product dependencies.
 
-The goal is to build the most important features first instead of developing everything at once.
+The goal is to build the most important functionality first and avoid spending time on low-priority features during the MVP stage.
 
 ---
 
 ## 2. Prioritization Framework
 
-Features are divided into:
+Features are evaluated using:
 
-* **Must Have** — Required for the product to provide its core experience.
-* **Should Have** — Important improvements but not essential for the first version.
-* **Could Have** — Useful enhancements that can be added later.
-
----
-
-## 3. Must Have
-
-### User Registration and Login
-
-**Why:**
-Allows users to securely access their accounts.
-
-**Priority:** Must Have
-
-### Product Details Page
-
-**Why:**
-Users need more information before deciding to purchase a product.
-
-**Priority:** Must Have
-
-### Cart Quantity Management
-
-**Why:**
-Users should be able to increase or decrease product quantities.
-
-**Priority:** Must Have
-
-### Checkout
-
-**Why:**
-Provides the basic flow required to complete an order.
-
-**Priority:** Must Have
+* User Value
+* Business Impact
+* Development Effort
+* Dependency
+* Scalability and Future Value
 
 ---
 
-## 4. Should Have
+## 3. MVP Features
 
-### Product Search
+| Feature         | User Value | Effort | Priority |
+| --------------- | ---------- | ------ | -------- |
+| Product Catalog | High       | Low    | MVP      |
+| Product Images  | High       | Low    | MVP      |
+| Product Prices  | High       | Low    | MVP      |
+| Add to Cart     | High       | Medium | MVP      |
+| Cart Count      | High       | Low    | MVP      |
+| Responsive UI   | High       | Medium | MVP      |
 
-**Why:**
-Helps users quickly find products when the catalog becomes larger.
-
-**Priority:** Should Have
-
-### Product Categories
-
-**Why:**
-Makes browsing easier when many products are available.
-
-**Priority:** Should Have
-
-### Order Tracking
-
-**Why:**
-Allows customers to monitor their orders after checkout.
-
-**Priority:** Should Have
+These features provide the basic shopping experience required for the first version.
 
 ---
 
-## 5. Could Have
+## 4. Post-MVP Features
 
-### Product Reviews
-
-**Why:**
-Allows customers to share feedback about products.
-
-**Priority:** Could Have
-
-### Wishlist
-
-**Why:**
-Allows users to save products for later.
-
-**Priority:** Could Have
-
-### Personalized Recommendations
-
-**Why:**
-Could help users discover relevant products based on their activity.
-
-**Priority:** Could Have
+| Feature              | User Value | Effort | Priority |
+| -------------------- | ---------- | ------ | -------- |
+| Product Search       | High       | Medium | Next     |
+| Product Categories   | Medium     | Medium | Next     |
+| Shopping Cart Page   | High       | Medium | Next     |
+| User Authentication  | High       | High   | Later    |
+| Backend API          | High       | High   | Later    |
+| Database Integration | High       | High   | Later    |
+| Checkout             | High       | High   | Later    |
+| Payment Integration  | High       | High   | Later    |
+| Order Management     | High       | High   | Later    |
 
 ---
 
-## 6. PM Decision Factors
+## 5. Prioritization Logic
+
+### High Priority
+
+Features that directly improve the core shopping experience and are relatively simple to implement.
+
+Examples:
+
+* Product Catalog
+* Product Images
+* Product Prices
+* Add to Cart
+
+### Medium Priority
+
+Features that improve usability but are not required for the initial MVP.
+
+Examples:
+
+* Search
+* Categories
+* Improved Cart Page
+
+### Later Priority
+
+Features that require significant backend, security, payment or infrastructure work.
+
+Examples:
+
+* Authentication
+* Payments
+* Orders
+* Database
+* Backend API
+
+---
+
+## 6. PM Decision Process
 
 Before prioritizing a feature, the PM should consider:
 
-* User value
-* Business value
-* Development effort
-* Technical complexity
-* Security impact
-* Scalability impact
-* Dependencies
-* Launch timeline
+```text
+User Problem
+     ↓
+User Value
+     ↓
+Business Impact
+     ↓
+Development Effort
+     ↓
+Dependencies
+     ↓
+Priority
+```
 
 ---
 
-## 7. Prioritization Table
+## 7. MVP Principle
 
-| Feature                   | Priority    | Main Reason               |
-| ------------------------- | ----------- | ------------------------- |
-| User Registration & Login | Must Have   | Account access            |
-| Product Details           | Must Have   | Better purchase decisions |
-| Cart Quantity             | Must Have   | Complete cart experience  |
-| Checkout                  | Must Have   | Complete purchase flow    |
-| Product Search            | Should Have | Faster product discovery  |
-| Product Categories        | Should Have | Easier browsing           |
-| Order Tracking            | Should Have | Post-purchase experience  |
-| Product Reviews           | Could Have  | Customer feedback         |
-| Wishlist                  | Could Have  | Save products             |
-| Recommendations           | Could Have  | Product discovery         |
+The MVP should focus on delivering the core user experience quickly.
+
+The product should not include complex functionality before validating whether users need it.
 
 ---
 
-## 8. Future Review
+## 8. Future Prioritization
 
-Priorities should be reviewed when:
+Priorities should be reviewed using:
 
-* User needs change
-* Business goals change
-* New data becomes available
-* Development effort changes
-* Customer feedback identifies new problems
+* User feedback
+* Product usage data
+* Business goals
+* Technical limitations
+* Development capacity
+* Infrastructure cost
 
-Feature prioritization is not permanent and should be updated as the product evolves.
+This allows the roadmap to change based on evidence rather than assumptions.
