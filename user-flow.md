@@ -2,162 +2,167 @@
 
 ## 1. Objective
 
-Define the basic journey a customer follows while using ShopEasy.
+Define the main journey a user follows while interacting with ShopEasy.
 
-The goal is to make the shopping experience simple and easy to understand.
+The flow focuses on the MVP shopping experience: discovering products and adding them to the cart.
 
 ---
 
-## 2. Main User Journey
+## 2. Main User Flow
 
 ```text
-Customer
-   ↓
+User
+  ↓
 Open ShopEasy
-   ↓
-View Products
-   ↓
-Select Product
-   ↓
-Add to Cart
-   ↓
-View Cart
-   ↓
-Checkout
-   ↓
-Order Confirmation
+  ↓
+View Homepage
+  ↓
+Browse Products
+  ↓
+View Product Name, Image and Price
+  ↓
+Click "Add to Cart"
+  ↓
+Cart Count Increases
+  ↓
+Cart Information Updates
 ```
 
 ---
 
-## 3. Step-by-Step Flow
+## 3. Detailed Flow
 
 ### Step 1 — Open Website
 
-The customer opens the ShopEasy website.
+The user opens the ShopEasy website.
 
-**User Goal:**
-Access the shopping experience.
+### Step 2 — View Homepage
 
----
+The user sees:
 
-### Step 2 — Browse Products
+* ShopEasy branding
+* Shopping cart count
+* Product introduction
+* Product catalog
 
-The customer views the available products and their prices.
+### Step 3 — Browse Products
 
-**User Goal:**
-Find a product they are interested in.
+The user can view:
 
----
+* Wireless Headphones
+* Smart Watch
+* Laptop
 
-### Step 3 — Select Product
+Each product includes:
 
-The customer selects a product to learn more about it.
+* Product image
+* Product name
+* Price
+* Add to Cart button
 
-**User Goal:**
-Understand the product before adding it to the cart.
+### Step 4 — Add Product
 
----
+The user clicks **Add to Cart**.
 
-### Step 4 — Add to Cart
+The system:
 
-The customer clicks **Add to Cart**.
+1. Adds the product to the cart.
+2. Updates the cart count.
+3. Updates the cart message.
 
-The selected product is added to the shopping cart.
+### Step 5 — Continue Shopping
 
-**User Goal:**
-Save the product for purchase.
-
----
-
-### Step 5 — View Cart
-
-The customer opens the cart and reviews selected products.
-
-**User Goal:**
-Check selected products and quantities.
+The user can continue browsing and add additional products.
 
 ---
 
-### Step 6 — Checkout
-
-The customer proceeds to checkout.
-
-Future versions can include:
-
-* Delivery information
-* Payment method
-* Order summary
-
-**User Goal:**
-Complete the purchase.
-
----
-
-### Step 7 — Order Confirmation
-
-After a successful purchase, the customer receives an order confirmation.
-
-**User Goal:**
-Know that the order was successfully placed.
-
----
-
-## 4. Current MVP Flow
-
-The current working version supports:
+## 4. User Flow Diagram
 
 ```text
-Open Website
-     ↓
-View Products
-     ↓
-Add to Cart
-     ↓
-View Cart
+┌──────────────┐
+│     User     │
+└──────┬───────┘
+       ↓
+┌──────────────┐
+│ Open Website │
+└──────┬───────┘
+       ↓
+┌──────────────────┐
+│ Browse Products  │
+└──────┬───────────┘
+       ↓
+┌──────────────────┐
+│ View Product     │
+│ Image + Price    │
+└──────┬───────────┘
+       ↓
+┌──────────────────┐
+│  Add to Cart     │
+└──────┬───────────┘
+       ↓
+┌──────────────────┐
+│ Update Cart      │
+│ Count            │
+└──────┬───────────┘
+       ↓
+┌──────────────────┐
+│ Continue Shopping│
+└──────────────────┘
 ```
 
-Checkout and order confirmation are planned for future versions.
+---
+
+## 5. Alternative Flow
+
+If the user does not want a product:
+
+```text
+Browse Product
+      ↓
+Does not Add to Cart
+      ↓
+Continue Browsing
+```
 
 ---
 
-## 5. Error Scenarios
+## 6. Future User Flow
 
-### Products Cannot Load
+Future versions can extend the flow:
 
-If the product data cannot be loaded, the website should show an appropriate error message.
-
-### Add to Cart Failure
-
-If a product cannot be added to the cart, the user should receive clear feedback.
-
-### Checkout Failure
-
-In future versions, if checkout fails, the user should be informed and given an option to retry.
-
----
-
-## 6. PM Considerations
-
-The Product Manager should review the user flow to ensure:
-
-* Each step has a clear user goal
-* Users understand what to do next
-* Unnecessary steps are minimized
-* Errors provide useful feedback
-* The flow supports the product goal
-* Future features can be added without making the experience confusing
+```text
+Browse Products
+      ↓
+Product Details
+      ↓
+Add to Cart
+      ↓
+View Cart
+      ↓
+Login / Sign Up
+      ↓
+Checkout
+      ↓
+Payment
+      ↓
+Order Confirmation
+      ↓
+Order Tracking
+```
 
 ---
 
-## 7. Future Improvements
+## 7. PM Considerations
 
-The user flow can later be expanded with:
+The PM should monitor where users may face friction in the journey.
 
-* User Login
-* Product Search
-* Product Categories
-* Product Details
-* Cart Quantity Management
-* Checkout
-* Pay
+Important areas include:
+
+* Product discovery
+* Product information
+* Add-to-cart interaction
+* Cart visibility
+* Checkout experience
+* Payment experience
+
+Future improvements should be based on user feedback and product usage data.
